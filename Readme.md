@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артём Остащенко](https://up.htmlacademy.ru/adaptive/11/user/20604).
-* Наставник: [Николай Громов] (https://htmlacademy.ru/profile/id6170).
+* Наставник: [Николай Громов](https://htmlacademy.ru/profile/id6170).
 
 ---
 
