@@ -1,0 +1,281 @@
+/*.bold() {
+  font-size: @font-size-bold;
+  font-weight: 700;
+  line-height: @font-size-bold*1.4444;
+  text-transform: uppercase;
+  font-family: @font-family;
+}
+
+.regular() {
+  font-size: @font-size-regular;
+  font-weight: 400;
+  line-height: @font-size-regular*1.5;
+  text-transform: uppercase;
+  font-family: @font-family;
+}*/
+@font-face {
+  font-family: PTSans;
+  src: url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: PTSans;
+  src: url("../fonts/ptsansbold.woff") format("woff"), url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.advantage__header {
+  background-color: #81b3d2;
+}
+.advantage__header--passivStyle {
+  background-color: #eeeeee;
+}
+.advantage__title {
+  font-family: PTSans, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  color: white;
+}
+.advantage__title--passivStyle {
+  color: black;
+}
+.advantage__num,
+.advantage__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: white;
+}
+.advantage__num--passivStyle,
+.advantage__text--passivStyle {
+  color: #333333;
+}
+.advantage__list-item {
+  list-style: none;
+}
+.advantage__list-item-motto {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: black;
+}
+.advantage__list-item-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: #333333;
+}
+.btn {
+  background-color: #81b3d2;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: PTSans, sans-serif;
+}
+.feedback {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+.feedback-form__block {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: black;
+}
+.feedback-form__send-btn {
+  line-height: 25.99989px;
+  font-size: 21px;
+  width: 280px;
+  height: 58px;
+  cursor: pointer;
+}
+.field-checkbox {
+  display: block;
+}
+.field-checkbox__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  font-family: PTSans, sans-serif;
+  color: black;
+  text-transform: none;
+}
+.field-radio {
+  display: block;
+}
+.field-radio__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  font-family: PTSans, sans-serif;
+  color: black;
+  text-transform: none;
+}
+.field-text {
+  display: block;
+}
+.field-text__name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25.99996px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: #333333;
+}
+.find-hotel__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: black;
+}
+.find-hotel__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.99992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: #333333;
+}
+.find-hotel__ref {
+  font-size: 21px;
+  line-height: 25.99989px;
+}
+.likes {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23.99992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+}
+.main {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+.nav {
+  list-style: none;
+}
+.nav__item > a {
+  font-size: 18px;
+  line-height: 39.99996px;
+}
+.page-footer {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 25.99989px;
+  color: black;
+  background-color: #fefefe;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+}
+.page-footer__hashtag {
+  font-size: 21px;
+  font-weight: 700;
+}
+.page-footer__developer {
+  font-size: 14px;
+  font-weight: 400;
+}
+.page-header {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+.photo {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+.photo__item-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23.99992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+}
+.photo__item-author {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.99992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+}
+.social-links {
+  list-style: none;
+}
+.social-link__twitter {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: #81b3d2 url("../img/icon-twitter.svg") 18px 18px no-repeat;
+  text-indent: -9999px;
+}
+.social-link__facebook {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: #81b3d2 url("../img/icon-facebook.svg") 20px 20px no-repeat;
+  text-indent: -9999px;
+}
+.social-link__youtube {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: #81b3d2 url("../img/icon-youtube.svg") 15px 20px no-repeat;
+  text-indent: -9999px;
+}
+.video-presentation__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: black;
+}
+.video-presentation__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.99992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: #333333;
+}
+.welcome {
+  background: url("../img/bg-back-mobile@1x.jpg") 0 0 no-repeat, url("../img/text-sedona-index.svg") 0 0 no-repeat;
+  height: 389px;
+}
+.welcome-slogan__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.9992px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: black;
+}
+.welcome-slogan__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-family: PTSans, sans-serif;
+  color: #333333;
+}
+.welcome-slogan__text--modified {
+  line-height: 23.99992px;
+}
