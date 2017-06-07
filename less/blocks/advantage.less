@@ -15,10 +15,15 @@
   font-weight: 400;
   line-height: @font-size-md * 1.5;
   color: white;
+  margin-bottom: 15px;
 }
 
 .advantage__header {
   background-color: @primary-color;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &--passiv-style {
     background-color: @passiv-style-color;
@@ -31,6 +36,14 @@
   &--passiv-style > .advantage__num,
   &--passiv-style > .advantage__text {
     color: @secondary-color;
+  }
+
+  &:nth-child(1) {
+    height: 211px;
+  }
+
+  &:nth-child(2) {
+    height: 191px;
   }
 }
 
