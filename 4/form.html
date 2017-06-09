@@ -12,9 +12,8 @@
       <nav class="main-nav">
         <ul class="nav" id="nav">
           <li class="nav__item"><a href="index.html">Главная</a></li>
-          <li class="nav__item"><a href="photo.html">Фото и видео</a></li>
-          <li class="nav__item"></li>
-          <li class="nav__item"><a href="">Форма отзыва</a></li>
+          <li class="nav__item  nav__item--flex-growed"><a href="photo.html">Фото и видео</a></li>
+          <li class="nav__item  nav__item--active"><a href="">Форма отзыва</a></li>
           <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
         <a class="toggler" href="" id="toggler"><span></span></a>
@@ -32,7 +31,7 @@
       </div>
 
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="feedback-form__block">
+        <fieldset class="feedback-form__block  feedback-form__block--present-style">
           <legend>Представьтесь:</legend>
           <label class="field-text">
             <span class="field-text__name">Имя*:</span>
@@ -48,7 +47,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__block">
+        <fieldset class="feedback-form__block  feedback-form__block--contact-style">
           <legend>Контактная информация:</legend>
           <label class="field-text">
             <span class="field-text__name">Контактный телефон*:</span>
@@ -60,7 +59,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__block">
+        <fieldset class="feedback-form__block  feedback-form__block--impression-style">
           <legend>Ваше общее впечатление:</legend>
           <label class="field-radio">
             <input class="field-radio__input" type="radio" name="marker" id="positive" value="positive" checked>
@@ -76,34 +75,36 @@
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__block">
+        <fieldset class="feedback-form__block  feedback-form__block--sight-style">
           <legend>Посещенные достопримечательности:</legend>
-          <label class="field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="bridge" id="bridge" value="bridge" checked>
-            <span class="field-checkbox__name">Мост Дьявола</span>
-          </label>
-          <label class="field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="park" id="park" value="park" checked>
-            <span class="field-checkbox__name">Слайд-парк</span>
-          </label>
-          <label class="field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="bell" id="bell" value="bell">
-            <span class="field-checkbox__name">Гора-Колокол</span>
-          </label>
-          <label class="field-checkbox">
-            <input class="field-checkbox__input" type="checkbox" name="rocks" id="rocks" value="rocks" checked>
-            <span class="field-checkbox__name">Красные скалы</span>
-          </label>
+          <div class="feedback-form__block-wrapper">
+            <label class="field-checkbox  field-checkbox--bridge-style">
+              <input class="field-checkbox__input" type="checkbox" name="bridge" id="bridge" value="bridge" checked>
+              <span class="field-checkbox__name">Мост Дьявола</span>
+            </label>
+            <label class="field-checkbox  field-checkbox--park-style">
+              <input class="field-checkbox__input" type="checkbox" name="park" id="park" value="park" checked>
+              <span class="field-checkbox__name">Слайд-парк</span>
+            </label>
+            <label class="field-checkbox  field-checkbox--bell-style">
+              <input class="field-checkbox__input" type="checkbox" name="bell" id="bell" value="bell">
+              <span class="field-checkbox__name">Гора-Колокол</span>
+            </label>
+            <label class="field-checkbox  field-checkbox--rocks-style">
+              <input class="field-checkbox__input" type="checkbox" name="rocks" id="rocks" value="rocks" checked>
+              <span class="field-checkbox__name">Красные скалы</span>
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback-form__block">
+        <fieldset class="feedback-form__block  feedback-form__block--emotion-style">
           <legend>Опишите свои эмоции:</legend>
           <label class="field-textarea">
             <textarea id="field-textarea__input" name="feedback-text" rows="6" cols="27" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
 
-        <input class="btn feedback-form__send-btn" type="submit" name="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+        <input class="btn  feedback-form__send-btn" type="submit" name="submit" value="ОТПРАВИТЬ ОТЗЫВ">
       </form>
 
     </main>

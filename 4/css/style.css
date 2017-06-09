@@ -451,46 +451,42 @@ body {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .advantage__header--passiv-style {
   background-color: #eeeeee;
 }
-.advantage__header--passiv-style > .advantage__title {
+.advantage__header--passiv-style .advantage__title {
   color: black;
 }
-.advantage__header--passiv-style > .advantage__num,
-.advantage__header--passiv-style > .advantage__text {
+.advantage__header--passiv-style .advantage__num,
+.advantage__header--passiv-style .advantage__text {
   color: #333333;
 }
-.advantage__header:nth-child(1) {
+.advantage__header--number-one-state {
   height: 211px;
 }
-.advantage__header:nth-child(2) {
+.advantage__header--number-two-state {
   height: 191px;
 }
-.advantage__header:nth-child(4)::before {
-  /* почему то не отображается*/
+.advantage__header--road-style::before {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 5px;
-  background-color: red;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
+  width: 87.5%;
+  height: 1px;
+  background-color: #d6d6d6;
+  top: 0%;
+  left: 6.25%;
 }
-.advantage__header--passiv-style:nth-child(2)::after {
-  /* почему то не действует*/
+.advantage__header--road-style::after {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 2px;
-  background-color: red;
-  top: 50px;
-  left: 20px;
-  z-index: 2;
+  width: 87.5%;
+  height: 1px;
+  background-color: #d6d6d6;
+  top: 99%;
+  left: 6.25%;
 }
 .advantage__list-item {
   list-style: none;
@@ -506,14 +502,16 @@ body {
   left: -52px;
   width: 44px;
   height: 44px;
+}
+.advantage__list-item--motel-style::before {
   background: url("../img/icon-house.svg") 0px 0px no-repeat;
   background-size: 40px;
 }
-.advantage__list-item:nth-child(2)::before {
+.advantage__list-item--souvenir-style::before {
   background: url("../img/icon-gift.svg") 0px 0px no-repeat;
   background-size: 33px;
 }
-.advantage__list-item:nth-child(3)::before {
+.advantage__list-item--food-style::before {
   background: url("../img/icon-burger.svg") 0px 0px no-repeat;
   background-size: 36px;
 }
@@ -540,11 +538,11 @@ body {
   .advantage--full-width {
     width: 100%;
   }
-  .advantage--inverted-order > .advantage__header {
+  .advantage--inverted-order .advantage__header {
     -ms-flex-order: 2;
         order: 2;
   }
-  .advantage--inverted-order > .advantage__photo {
+  .advantage--inverted-order .advantage__photo {
     -ms-flex-order: 1;
         order: 1;
   }
@@ -555,10 +553,19 @@ body {
   .advantage__header--passiv-style {
     width: 100%;
   }
+  .advantage__header--number-one-state,
+  .advantage__header--number-two-state {
+    height: 256px;
+  }
+  .advantage__header--road-style::before {
+    display: none;
+  }
+  .advantage__header--road-style::after {
+    display: none;
+  }
   .advantage__photo {
     width: 67%;
     height: 256px;
-    outline: 1px solid red;
   }
   .advantage__photo img {
     max-width: 100%;
@@ -577,28 +584,29 @@ body {
     margin-top: 164px;
   }
   .advantage__list-item::before {
-    left: 43%;
+    left: 50%;
+    transform: translateX(-50%);
     top: -110px;
     width: 71px;
     height: 71px;
     background-size: 71px;
   }
-  .advantage__list-item:nth-child(2)::before {
+  .advantage__list-item--souvenir-style {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .advantage__list-item--souvenir-style::before {
     width: 85px;
     height: 85px;
     background-size: 71px;
     top: -130px;
   }
-  .advantage__list-item:nth-child(3)::before {
-    background-size: 71px;
-  }
-  .advantage__list-item:nth-child(2) {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-  .advantage__list-item:nth-child(3) {
+  .advantage__list-item--food-style {
     -ms-flex-order: 2;
         order: 2;
+  }
+  .advantage__list-item--food-style::before {
+    background-size: 71px;
   }
   .advantage__list-item-text {
     width: 164px;
@@ -610,6 +618,16 @@ body {
   font-weight: 700;
   color: white;
   text-decoration: none;
+}
+.btn:hover {
+  background-color: #669ec0;
+}
+.btn:active {
+  background-color: #5496bd;
+  color: #94b9d2;
+}
+.btn:disabled {
+  background-color: #e5e5e5;
 }
 .feedback {
   width: 100%;
@@ -633,6 +651,7 @@ body {
   width: 280px;
   height: 58px;
   cursor: pointer;
+  border: none;
 }
 @media (min-width: 768px) {
   .feedback-form {
@@ -647,7 +666,7 @@ body {
     margin-left: 60px;
     margin-right: 60px;
   }
-  .feedback-form__block:nth-child(1) {
+  .feedback-form__block--present-style {
     width: 49%;
     -ms-flex-order: 2;
         order: 2;
@@ -656,12 +675,12 @@ body {
     border: none;
     border-left: 1px solid #d6d6d6;
   }
-  .feedback-form__block:nth-child(2) {
+  .feedback-form__block--contact-style {
     width: 100%;
     -ms-flex-order: 3;
         order: 3;
   }
-  .feedback-form__block:nth-child(3) {
+  .feedback-form__block--impression-style {
     width: 50%;
     -ms-flex-order: 1;
         order: 1;
@@ -669,21 +688,23 @@ body {
     padding: 0;
     border: none;
   }
-  .feedback-form__block:nth-child(4) {
+  .feedback-form__block--sight-style {
     width: 100%;
     -ms-flex-order: 4;
         order: 4;
+  }
+  .feedback-form__block--emotion-style {
+    width: 100%;
+    -ms-flex-order: 5;
+        order: 5;
+  }
+  .feedback-form__block-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-direction: row;
         flex-direction: row;
-  }
-  .feedback-form__block:nth-child(5) {
-    width: 100%;
-    -ms-flex-order: 5;
-        order: 5;
   }
   .feedback-form__send-btn {
     width: 44%;
@@ -693,12 +714,8 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .feedback-form__block {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
   .feedback-form__send-btn {
-    margin-left: 120px;
+    margin-left: 10%;
   }
 }
 .field-checkbox {
@@ -714,13 +731,43 @@ body {
 @media (min-width: 768px) {
   .field-checkbox {
     width: 50%;
-    outline: 1px solid red;
+  }
+  .field-checkbox--bridge-style {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .field-checkbox--park-style {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .field-checkbox--bell-style {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .field-checkbox--rocks-style {
+    -ms-flex-order: 4;
+        order: 4;
   }
 }
 @media (min-width: 1200px) {
   .field-checkbox {
     width: 25%;
-    outline: 1px solid red;
+  }
+  .field-checkbox--bridge-style {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .field-checkbox--park-style {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .field-checkbox--bell-style {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .field-checkbox--rocks-style {
+    -ms-flex-order: 4;
+        order: 4;
   }
 }
 .field-radio {
@@ -829,6 +876,18 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .main-nav::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 102px;
+    height: 84px;
+    background: url("../img/logo-sedona-mobile.svg") 0px 0px no-repeat;
+  }
+}
+@media (min-width: 768px) {
   .map {
     width: 100%;
     height: 350px;
@@ -842,6 +901,16 @@ body {
   margin: 0;
   padding: 0;
 }
+.nav::after {
+  content: "";
+  position: absolute;
+  left: 94%;
+  transform: translateX(-50%);
+  top: 17px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon-cross.svg") 0px 0px no-repeat;
+}
 .nav__item {
   height: 56px;
   width: 100%;
@@ -849,9 +918,9 @@ body {
   border-top: 1px solid #678fa8;
   display: -ms-flexbox;
   display: flex;
-}
-.nav__item:nth-child(3) {
-  display: none;
+  box-sizing: border-box;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .nav__item > a {
   font-size: 18px;
@@ -860,7 +929,15 @@ body {
   font-weight: 700;
   color: white;
   text-decoration: none;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.nav__item > a:hover {
+  background-color: #669ec0;
+}
+.nav__item > a:active {
+  background-color: #5496bd;
+  color: #94b9d2;
 }
 @media (min-width: 768px) {
   .nav {
@@ -871,16 +948,41 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .nav::after {
+    display: none;
+  }
   .nav__item {
     width: 20%;
     background-color: white;
   }
-  .nav__item:nth-child(3) {
-    display: block;
+  .nav__item--flex-growed {
+    -ms-flex-positive: 2;
+        flex-grow: 2;
+    padding-right: 20%;
   }
   .nav__item > a {
     color: black;
     background-color: white;
+  }
+  .nav__item > a:hover {
+    background-color: white;
+    color: #95bed8;
+  }
+  .nav__item > a:active {
+    background-color: white;
+    color: #e4e4e4;
+  }
+  .nav__item--active > a {
+    color: #827167;
+    background-color: white;
+  }
+  .nav__item--active > a:hover {
+    background-color: white;
+    color: #604e43;
+  }
+  .nav__item--active > a:active {
+    background-color: white;
+    color: #dbd8d5;
   }
 }
 .page-footer {
@@ -964,7 +1066,6 @@ body {
   }
   .photo__item {
     width: 50%;
-    outline: 1px solid red;
   }
   .photo__item:first-of-type {
     width: 100%;
@@ -979,7 +1080,6 @@ body {
 @media (min-width: 1200px) {
   .photo__item {
     width: 33.3%;
-    outline: 1px solid red;
   }
   .photo__item:first-of-type {
     width: 100%;
@@ -996,6 +1096,12 @@ body {
   width: 151px;
   margin: 0 auto;
   padding-left: 0px;
+}
+.social-links a:hover {
+  background-color: #669ec0;
+}
+.social-links a:active {
+  background-color: #5496bd;
 }
 .social-link__twitter {
   display: block;
@@ -1027,13 +1133,29 @@ body {
   height: 56px;
   display: block;
   width: 100%;
+  position: relative;
+}
+.toggler::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 102px;
+  height: 84px;
+  background: url("../img/logo-sedona-mobile.svg") 0px 0px no-repeat;
+}
+.toggler::after {
+  content: "";
+  position: absolute;
+  left: 94%;
+  transform: translateX(-50%);
+  top: 17px;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon-menu.svg") 0px 0px no-repeat;
 }
 @media (min-width: 768px) {
-  .toggler {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
   .toggler {
     display: none;
   }
