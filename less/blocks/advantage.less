@@ -29,45 +29,43 @@
 
   &--passiv-style {
     background-color: @passiv-style-color;
+
+    .advantage__title {
+      color: black;
+    }
+
+    .advantage__num,
+    .advantage__text {
+      color: @secondary-color;
+    }
   }
 
-  &--passiv-style > .advantage__title {
-    color: black;
-  }
-
-  &--passiv-style > .advantage__num,
-  &--passiv-style > .advantage__text {
-    color: @secondary-color;
-  }
-
-  &:nth-child(1) {
+  &--number-one-state {
     height: 211px;
   }
 
-  &:nth-child(2) {
+  &--number-two-state {
     height: 191px;
   }
 
-  &:nth-child(4)::before { /* почему то не отображается*/
+  &--road-style::before {
     content: "";
     position: absolute;
-    width: 280px;
-    height: 5px;
-    background-color: red;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
+    width: 87.5%;
+    height: 1px;
+    background-color: @separator-line-color;
+    top: 0%;
+    left: 6.25%;
   }
 
-  &--passiv-style:nth-child(2)::after { /* почему то не действует*/
+  &--road-style::after {
     content: "";
     position: absolute;
-    width: 280px;
-    height: 2px;
-    background-color: red;
-    top: 50px;
-    left: 20px;
-    z-index: 2;
+    width: 87.5%;
+    height: 1px;
+    background-color: @separator-line-color;
+    top: 99%;
+    left: 6.25%;
   }
 }
 
@@ -90,16 +88,19 @@
     left: -52px;
     width: 44px;
     height: 44px;
+  }
+
+  &--motel-style::before {
     background: url("../img/icon-house.svg") 0px 0px no-repeat;
     background-size: 40px;
   }
 
-  &:nth-child(2)::before {
+  &--souvenir-style::before {
     background: url("../img/icon-gift.svg") 0px 0px no-repeat;
     background-size: 33px;
   }
 
-  &:nth-child(3)::before {
+  &--food-style::before {
     background: url("../img/icon-burger.svg") 0px 0px no-repeat;
     background-size: 36px;
   }
@@ -131,11 +132,11 @@
     }
 
     &--inverted-order {
-      & > .advantage__header {
+      .advantage__header {
         order: 2;
       }
 
-      & > .advantage__photo {
+      .advantage__photo {
         order: 1;
       }
     }
@@ -149,14 +150,26 @@
     &--passiv-style {
       width: 100%;
     }
+
+    &--number-one-state,
+    &--number-two-state {
+      height: 256px;
+    }
+
+    &--road-style::before {
+      display: none;
+    }
+
+    &--road-style::after {
+      display: none;
+    }
   }
 
   .advantage__photo {
     width: 67%;
     height: 256px;
-    outline: 1px solid red;
 
-    & img {
+    img {
       max-width: 100%;
       height: 256px;
     }
@@ -175,30 +188,31 @@
     margin-top: 164px;
 
     &::before {
-      left: 43%;
+      left: 50%;
+      transform: translateX(-50%);
       top: -110px;
       width: 71px;
       height: 71px;
       background-size: 71px;
     }
 
-    &:nth-child(2)::before {
-      width: 85px;
-      height: 85px;
-      background-size: 71px;
-      top: -130px;
-    }
-
-    &:nth-child(3)::before {
-      background-size: 71px;
-    }
-
-    &:nth-child(2) {
+    &--souvenir-style {
       order: 3;
+
+      &::before {
+        width: 85px;
+        height: 85px;
+        background-size: 71px;
+        top: -130px;
+      }
     }
 
-    &:nth-child(3) {
+    &--food-style {
       order: 2;
+
+      &::before {
+        background-size: 71px;
+      }
     }
   }
 

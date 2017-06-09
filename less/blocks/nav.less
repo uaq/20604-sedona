@@ -10,10 +10,6 @@
   background-color : @primary-color;
   border-top: 1px solid @menu-line-color;
   display: flex;
-
-  &:nth-child(3) {
-    display: none;
-  }
 }
 
 .nav__item > a {
@@ -37,8 +33,9 @@
     width: 20%;
     background-color : white;
 
-    &:nth-child(3) {
-      display: block;
+    &--flex-growed {
+      flex-grow: 2;
+      padding-right: 20%;
     }
   }
 

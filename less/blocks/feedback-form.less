@@ -30,38 +30,46 @@
   .feedback-form__block {
     margin-left: 60px;
     margin-right: 60px;
+
+    &--present-style {
+      width: 50% - 1px;
+      order: 2;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-left: 1px solid @separator-line-color;
+    }
+
+    &--contact-style {
+      width: 100%;
+      order: 3;
+    }
+
+    &--impression-style {
+      width: 50%;
+      order: 1;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    &--sight-style {
+      width: 100%;
+      order: 4;
+    }
+
+    &--emotion-style {
+      width: 100%;
+      order: 5;
+    }
   }
 
-  .feedback-form__block:nth-child(1) {
-    width: 50% - 1px;
-    order: 2;
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-left: 1px solid @separator-line-color;
-  }
-  .feedback-form__block:nth-child(2) {
-    width: 100%;
-    order: 3;
-  }
-  .feedback-form__block:nth-child(3) {
-    width: 50%;
-    order: 1;
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-  .feedback-form__block:nth-child(4) {
-    width: 100%;
-    order: 4;
+  .feedback-form__block-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .feedback-form__block:nth-child(5) {
-    width: 100%;
-    order: 5;
-  }
+
   .feedback-form__send-btn {
     width: 44%;
     order: 6;
@@ -71,10 +79,9 @@
 
 @media @desktop-widths {
   .feedback-form__block {
-    margin-left: 120px;
-    margin-right: 120px;
+
   }
   .feedback-form__send-btn {
-    margin-left: 120px;
+    margin-left: 10%;
   }
 }

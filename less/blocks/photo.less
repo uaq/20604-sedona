@@ -7,7 +7,7 @@
   border-top: 1px solid @separator-line-color;
 
 
-  & img {
+  img {
     margin-top: 23px;
     margin-bottom: 20px;
   }
@@ -43,18 +43,17 @@
 
   .photo__item {
     width: 50%;
-    outline: 1px solid red;
-  }
 
-  .photo__item:first-of-type {
-    width: 100%;
+    &:first-of-type {
+      width: 100%;
+    }
   }
 
   .photo__item-img {
     border: none;
 
 
-    & img {
+    img {
       margin: 0;
     }
   }
@@ -63,10 +62,9 @@
 @media @desktop-widths {
   .photo__item {
     width: 33.3%;
-    outline: 1px solid red;
-  }
 
-  .photo__item:first-of-type {
-    width: 100%;
+    &:first-of-type {
+      width: 100%;
+    }
   }
 }
