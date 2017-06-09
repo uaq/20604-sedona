@@ -2,6 +2,29 @@
   height: 56px;
   display: block;
   width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 102px;
+    height: 84px;
+    background: url("../img/logo-sedona-mobile.svg") 0px 0px no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 94%;
+    transform: translateX(-50%);
+    top: 17px;
+    width: 23px;
+    height: 22px;
+    background: url("../img/icon-menu.svg") 0px 0px no-repeat;
+  }
 }
 
 @media @tablet-widths {
@@ -11,7 +34,5 @@
 }
 
 @media @desktop-widths {
-  .toggler {
-    display: none;
-  }
+
 }

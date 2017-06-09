@@ -3,4 +3,17 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
+
+  &:hover {
+    background-color: @btn-hover-color;
+  }
+
+  &:active {
+    background-color: @btn-active-color;
+    color: @btn-active-text-color;
+  }
+
+  &:disabled {
+     background-color: @btn-disabled-color;
+  }
 }
