@@ -1,9 +1,28 @@
 .nav {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 94%;
+    transform: translateX(-50%);
+    top: 17px;
+    width: 22px;
+    height: 22px;
+    background: url("../img/icon-cross.svg") 0px 0px no-repeat;
+  }
 }
 
 .nav__item {
-
+  height: 56px;
+  width: 100%;
+  background-color : @primary-color;
+  border-top: 1px solid @menu-line-color;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .nav__item > a {
@@ -13,4 +32,74 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    background-color: @btn-hover-color;
+  }
+
+  &:active {
+    background-color: @btn-active-color;
+    color: @btn-active-text-color;
+  }
+}
+
+@media @tablet-widths {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .nav__item {
+    width: 20%;
+    background-color : white;
+
+    &--flex-growed {
+      flex-grow: 2;
+      padding-right: 20%;
+    }
+
+    &> a {
+      color: black;
+      background-color: white;
+
+      &:hover {
+        background-color: white;
+        color: @menu-hover-color;
+      }
+
+      &:active {
+        background-color: white;
+        color: @menu-hoverdown-color;
+      }
+    }
+
+    &--active {
+
+      & > a {
+        color: @menu-active-color;
+        background-color: white;
+
+        &:hover {
+          background-color: white;
+          color: @menu-activehover-color;
+        }
+
+        &:active {
+          background-color: white;
+          color: @menu-activedown-color;
+        }
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+
 }

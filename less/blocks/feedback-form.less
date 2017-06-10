@@ -1,5 +1,6 @@
 .feedback-form {
-
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .feedback-form__block {
@@ -7,6 +8,8 @@
   font-weight: 700;
   line-height: @font-size-lg * 1.4444;
   color: black;
+  border: none;
+  border-top: 1px solid @separator-line-color;
 }
 
 .feedback-form__send-btn {
@@ -15,4 +18,71 @@
   width: 280px;
   height: 58px;
   cursor: pointer;
+  border: none;
+}
+
+@media @tablet-widths {
+  .feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .feedback-form__block {
+    margin-left: 60px;
+    margin-right: 60px;
+
+    &--present-style {
+      width: 50% - 1px;
+      order: 2;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-left: 1px solid @separator-line-color;
+    }
+
+    &--contact-style {
+      width: 100%;
+      order: 3;
+    }
+
+    &--impression-style {
+      width: 50%;
+      order: 1;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    &--sight-style {
+      width: 100%;
+      order: 4;
+    }
+
+    &--emotion-style {
+      width: 100%;
+      order: 5;
+    }
+  }
+
+  .feedback-form__block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .feedback-form__send-btn {
+    width: 44%;
+    order: 6;
+    margin-left: 60px;
+  }
+}
+
+@media @desktop-widths {
+  .feedback-form__block {
+
+  }
+  .feedback-form__send-btn {
+    margin-left: 10%;
+  }
 }

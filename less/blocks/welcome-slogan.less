@@ -1,5 +1,8 @@
 .welcome-slogan{
-
+  height: 221px;
+  padding-top: 389px;
+  width: 270px;
+  margin: 0 auto;
 }
 
 .welcome-slogan__title{
@@ -7,6 +10,7 @@
   font-weight: 700;
   line-height: @font-size-lg * 1.4444;
   color: black;
+  margin-top: 45px;
 }
 
 .welcome-slogan__text{
@@ -14,8 +18,23 @@
   font-weight: 400;
   line-height: @font-size-md * 1.5;
   color: @secondary-color;
+  margin-top: 42px;
 
   &--modified {
     line-height: @font-size-md * 1.71428;
   }
+}
+
+
+@media @tablet-widths {
+  .welcome-slogan{
+    height: 221px;
+    padding-top: 518px;
+    width: 508px;
+    margin: 0 auto;
+  }
+}
+
+@media @desktop-widths {
+
 }

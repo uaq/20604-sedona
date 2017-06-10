@@ -13,3 +13,49 @@
   color: black;
   text-transform: none;
 }
+
+@media @tablet-widths {
+  .field-checkbox {
+    width: 50%;
+
+
+    &--bridge-style {
+      order: 1;
+    }
+
+    &--park-style {
+      order: 3;
+    }
+
+    &--bell-style {
+      order: 2;
+    }
+
+    &--rocks-style {
+      order: 4;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .field-checkbox {
+    width: 25%;
+
+
+    &--bridge-style {
+      order: 1;
+    }
+
+    &--park-style {
+      order: 2;
+    }
+
+    &--bell-style {
+      order: 3;
+    }
+
+    &--rocks-style {
+      order: 4;
+    }
+  }
+}
