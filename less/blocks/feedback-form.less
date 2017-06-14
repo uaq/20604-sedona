@@ -10,6 +10,25 @@
   color: black;
   border: none;
   border-top: 1px solid @separator-line-color;
+  position: relative;
+
+  legend {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 245px;
+  }
+
+  &--emotion-style {
+      margin-top: 30px;
+    }
+}
+
+.feedback-form__block-wrapper {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 300px;
 }
 
 .feedback-form__send-btn {
@@ -31,19 +50,35 @@
   .feedback-form__block {
     margin-left: 60px;
     margin-right: 60px;
+    font-size: @font-size-xl;
+    position: static;
+
+    legend {
+      width: 399px;
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
 
     &--present-style {
-      width: 50% - 1px;
+      box-sizing: border-box;
+      width: 50%;
       order: 2;
       margin: 0;
       padding: 0;
       border: none;
-      border-left: 1px solid @separator-line-color;
+
+      legend {
+        text-align: left;
+        margin-left: 58px;
+      }
     }
 
     &--contact-style {
       width: 100%;
       order: 3;
+      margin-top: 68px;
     }
 
     &--impression-style {
@@ -52,16 +87,21 @@
       margin: 0;
       padding: 0;
       border: none;
+      box-sizing: border-box;
+      border-right: 1px solid @separator-line-color;
     }
 
     &--sight-style {
       width: 100%;
       order: 4;
+      margin-top: 20px;
     }
 
     &--emotion-style {
       width: 100%;
       order: 5;
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 
@@ -69,6 +109,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 0;
+    width: 500px;
   }
 
   .feedback-form__send-btn {
@@ -80,9 +122,14 @@
 
 @media @desktop-widths {
   .feedback-form__block {
-
+    &--present-style {
+      legend {
+        margin-left: 75px;
+      }
+    }
   }
-  .feedback-form__send-btn {
-    margin-left: 10%;
+
+  .feedback-form__block-wrapper {
+    width: 970px;
   }
 }

@@ -22,7 +22,7 @@
 
     <main class="feedback">
 
-      <div class="welcome">
+      <div class="welcome  welcome--reduced">
         <div class="welcome-slogan">
           <h1 class="welcome-slogan__title">Оставь свой отзыв</h1>
           <p class="welcome-slogan__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
@@ -34,15 +34,15 @@
           <legend>Представьтесь:</legend>
           <label class="field-text">
             <span class="field-text__name">Имя*:</span>
-            <input class="field-text__input" id="name" type="text" name="name" placeholder="Петр" required>
+            <input class="field-text__input  field-text__input--present-style" id="name" type="text" name="name" placeholder="Петр" required>
           </label>
           <label class="field-text">
             <span class="field-text__name">Фамилия*:</span>
-            <input class="field-text__input" id="surname" type="text" name="surname" placeholder="Иванов" required>
+            <input class="field-text__input  field-text__input--present-style" id="surname" type="text" name="surname" placeholder="Иванов" required>
           </label>
           <label class="field-text">
             <span class="field-text__name">Отчество:</span>
-            <input class="field-text__input" id="patronim" type="text" name="patronim" placeholder="Александрович">
+            <input class="field-text__input  field-text__input--present-style" id="patronim" type="text" name="patronim" placeholder="Александрович">
           </label>
         </fieldset>
 
@@ -50,11 +50,11 @@
           <legend>Контактная информация:</legend>
           <label class="field-text">
             <span class="field-text__name">Контактный телефон*:</span>
-            <input class="field-text__input" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
+            <input class="field-text__input  field-text__input--contact-style  field-text__input--tel" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
           </label>
           <label class="field-text">
             <span class="field-text__name">Электронная почта*:</span>
-            <input class="field-text__input" id="email" type="text" name="email" placeholder="Введите e-mail" required>
+            <input class="field-text__input  field-text__input--contact-style  field-text__input--mail" id="email" type="text" name="email" placeholder="Введите e-mail" required>
           </label>
         </fieldset>
 
@@ -99,12 +99,24 @@
         <fieldset class="feedback-form__block  feedback-form__block--emotion-style">
           <legend>Опишите свои эмоции:</legend>
           <label class="field-textarea">
-            <textarea id="field-textarea__input" name="feedback-text" rows="6" cols="27" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="field-textarea__input" name="feedback-text" rows="6" cols="27" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
 
         <input class="btn  feedback-form__send-btn" type="submit" name="submit" value="ОТПРАВИТЬ ОТЗЫВ">
       </form>
+
+      <div class="failure-popup hidden">
+        <h2 class="failure-popup__title">Что-то пошло не так!</h2>
+        <p class="failure-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить<p>
+        <button class="btn failure-popup__btn">OK</button>
+      </div>
+
+      <div class="success-popup hidden">
+        <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
+        <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.<p>
+        <button class="btn success-popup__btn">Закрыть окно</button>
+      </div>
 
     </main>
 

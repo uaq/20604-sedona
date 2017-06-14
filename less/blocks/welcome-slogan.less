@@ -1,7 +1,7 @@
 .welcome-slogan{
   height: 221px;
   padding-top: 389px;
-  width: 270px;
+  width: 275px;
   margin: 0 auto;
 }
 
@@ -30,8 +30,20 @@
   .welcome-slogan{
     height: 221px;
     padding-top: 518px;
-    width: 508px;
+    width: 436px;
     margin: 0 auto;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .welcome-slogan__title {
+    font-size: @font-size-xl;
   }
 }
 

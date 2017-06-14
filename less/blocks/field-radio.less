@@ -1,9 +1,23 @@
 .field-radio {
   display: block;
+  text-align: left;
+  width: 205px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 50px;
+
+  &:first-of-type {
+    margin-top: 25px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
 }
 
 .field-radio__input {
-
+  display: none;
 }
 
 .field-radio__name {
@@ -12,4 +26,56 @@
   line-height: @font-size-lg * 1.4444;
   color: black;
   text-transform: none;
+
+  &::before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: @photo-descr-color1;
+    position: absolute;
+    top: 37px;
+    left: -17px;
+  }
+
+  &:hover::before {
+    background-color: @btn-disabled-color;
+  }
+
+  &:active::before {
+    background-color: @separator-line-color;
+  }
+}
+
+input[type="radio"]:checked + .field-radio__name::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @secondary-color;
+    position: absolute;
+    top: 55px;
+    left: 1px;
+}
+
+input[type="radio"]:checked + .field-radio__name:active::after {
+    background-color: @radion-button-down-color;
+}
+
+
+
+@media @tablet-widths {
+  .field-radio {
+    &:first-of-type {
+      margin-top: 0px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media @desktop-widths {
+
 }

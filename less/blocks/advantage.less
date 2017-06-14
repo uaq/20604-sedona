@@ -7,6 +7,9 @@
   font-weight: 700;
   line-height: @font-size-lg * 1.4444;
   color: white;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .advantage__num,
@@ -16,7 +19,7 @@
   line-height: @font-size-md * 1.5;
   color: white;
   margin-bottom: 15px;
-  width: 258px;
+  width: 275px;
   margin: 0 auto;
 }
 
@@ -37,6 +40,7 @@
     .advantage__num,
     .advantage__text {
       color: @secondary-color;
+      width: 258px;
     }
   }
 
@@ -148,6 +152,11 @@
 
     &--passiv-style {
       width: 100%;
+
+      .advantage__num,
+      .advantage__text {
+        width: 158px;
+      }
     }
 
     &--number-one-state,
@@ -162,6 +171,15 @@
     &--road-style::after {
       display: none;
     }
+  }
+
+  .advantage__title {
+    font-size: @font-size-xl;
+    width: 151px;
+  }
+
+  .advantage__text {
+    width: 162px;
   }
 
   .advantage__photo {
@@ -216,15 +234,33 @@
   }
 
   .advantage__list-item-motto {
-
+    font-size: @font-size-xl;
+    width: 125px;
   }
 
   .advantage__list-item-text {
-    width: 164px;
+    width: 162px;
     margin: 30px auto;
   }
 }
 
 @media @desktop-widths {
+  .advantage__num,
+  .advantage__text {
+    width: 265px;
+  }
 
+  .advantage__header {
+    &--passiv-style {
+
+      .advantage__num,
+      .advantage__text {
+        width: 275px;
+      }
+    }
+  }
+
+  .advantage__list-item-text {
+    width: 285px;
+  }
 }
