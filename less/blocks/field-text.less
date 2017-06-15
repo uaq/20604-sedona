@@ -1,11 +1,22 @@
 .field-text {
   display: block;
-  margin: 20px;
+  margin: 20px auto;
   text-align: left;
-
 
   &:first-of-type {
     padding-top: 50px;
+  }
+
+  &--present-style {
+    display: flex;
+    align-items: center;
+  }
+
+  &--contact-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
   }
 }
 
@@ -34,7 +45,7 @@
   }
 
   &--present-style {
-
+    flex-grow: 1;
   }
 
   &--contact-style {
@@ -94,7 +105,6 @@
 
 @media @tablet-widths {
   .field-text {
-    margin-left: 58px;
 
 
     &:first-of-type {
@@ -106,12 +116,21 @@
 
 @media @desktop-widths {
   .field-text {
-    margin-left: 75px;
+    /*margin-left: 75px;*/
+
+    &--contact-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+    }
   }
 
   .field-text__input {
     &--contact-style {
-      width: auto;
+      width: 257px;
+      height: 58px;
     }
   }
 }

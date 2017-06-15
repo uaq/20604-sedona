@@ -21,8 +21,8 @@
   }
 
   &--emotion-style {
-      margin-top: 30px;
-    }
+    margin-top: 30px;
+  }
 }
 
 .feedback-form__block-wrapper {
@@ -40,11 +40,16 @@
   border: none;
 }
 
+.feedback-form__required-fields {
+  display: none;
+}
+
 @media @tablet-widths {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .feedback-form__block {
@@ -54,7 +59,6 @@
     position: static;
 
     legend {
-      width: 399px;
       position: static;
       top: auto;
       left: auto;
@@ -65,13 +69,14 @@
       box-sizing: border-box;
       width: 50%;
       order: 2;
-      margin: 0;
       padding: 0;
+      padding-right: 60px;
+      padding-left: 60px;
+      margin: 0;
       border: none;
 
       legend {
         text-align: left;
-        margin-left: 58px;
       }
     }
 
@@ -79,6 +84,13 @@
       width: 100%;
       order: 3;
       margin-top: 68px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+
+      legend {
+        width: 398px;
+      }
     }
 
     &--impression-style {
@@ -89,12 +101,21 @@
       border: none;
       box-sizing: border-box;
       border-right: 1px solid @separator-line-color;
+
+      legend {
+        width: 300px;
+      }
     }
 
     &--sight-style {
       width: 100%;
       order: 4;
       margin-top: 20px;
+      padding-right: 0px;
+
+      legend {
+        width: 398px;
+      }
     }
 
     &--emotion-style {
@@ -102,6 +123,10 @@
       order: 5;
       padding-left: 0px;
       padding-right: 0px;
+
+      legend {
+        width: 398px;
+      }
     }
   }
 
@@ -111,6 +136,7 @@
     flex-direction: row;
     margin-top: 0;
     width: 500px;
+    padding-left: 120px;
   }
 
   .feedback-form__send-btn {
@@ -118,18 +144,25 @@
     order: 6;
     margin-left: 60px;
   }
+
+  .feedback-form__required-fields {
+    display: block;
+    order: 7;
+    align-self: center;
+    margin-right: 60px;
+  }
 }
 
 @media @desktop-widths {
-  .feedback-form__block {
-    &--present-style {
-      legend {
-        margin-left: 75px;
-      }
-    }
+  .feedback-form__contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .feedback-form__block-wrapper {
-    width: 970px;
+    width: 100%;
+    margin-left: 30px;
+    padding-left: 0px;
   }
 }
