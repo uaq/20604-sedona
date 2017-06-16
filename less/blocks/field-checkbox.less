@@ -77,23 +77,12 @@ input[type="checkbox"]:checked + .field-checkbox__checkbox:active::after {
 
 @media @desktop-widths {
   .field-checkbox {
-    width: 25%;
+    width: auto;
+    margin-left: 30px;
+    margin-right: 0px;
 
-
-    &--bridge-style {
-      order: 1;
-    }
-
-    &--park-style {
-      order: 2;
-    }
-
-    &--bell-style {
-      order: 3;
-    }
-
-    &--rocks-style {
-      order: 4;
+    &__name {
+      margin-left: 40px;
     }
   }
 }

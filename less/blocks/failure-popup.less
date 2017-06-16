@@ -1,6 +1,8 @@
 .failure-popup {
-  position: absolute;
-  top: 1890px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   width: 100%;
   box-shadow: 0 5px 10px 5px @btn-disabled-color;
@@ -42,9 +44,6 @@
   .failure-popup {
     width: 400px;
     height: 348px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 1750px;
 
     &__title {
       font-size: @font-size-xxl;
@@ -55,12 +54,14 @@
     &__text {
       width: 292px;
     }
+
+    &__btn {
+      width: 272px;
+    }
   }
 
 }
 
 @media @desktop-widths {
-  .failure-popup {
-    top: 1500px;
-  }
+
 }

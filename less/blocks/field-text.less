@@ -18,6 +18,56 @@
     justify-content: center;
     align-items: stretch;
   }
+
+  &--tel {
+    position: relative;
+
+
+    &::before {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background-color: @btn-disabled-color;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 18px;
+      height: 18px;
+      background: url("../img/icon-phone.svg") 0px 0px no-repeat;
+    }
+  }
+
+  &--mail {
+    position: relative;
+
+
+    &::before {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background-color: @btn-disabled-color;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/icon-mail.svg") 0px 0px no-repeat;
+    }
+  }
 }
 
 .field-text__name {
@@ -51,55 +101,6 @@
   &--contact-style {
     width: 100%;
   }
-
-  &--tel {
-    position: relative;
-
-
-    &::before {
-      content: "";
-      width: 58px;
-      height: 58px;
-      background-color: @btn-disabled-color;
-      position: absolute;
-      top: 37px;
-      left: 17px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 52px;
-      width: 18px;
-      height: 18px;
-      background: url("../img/icon-phone.svg") 0px 0px no-repeat;
-    }
-  }
-  &--mail {
-    position: relative;
-
-
-    &::before {
-      content: "";
-      width: 58px;
-      height: 58px;
-      background-color: @btn-disabled-color;
-      position: absolute;
-      top: 37px;
-      left: -17px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -6px;
-      left: -52px;
-      width: 16px;
-      height: 16px;
-      background: url("../img/icon-mail.svg") 0px 0px no-repeat;
-    }
-  }
 }
 
 
@@ -116,20 +117,33 @@
 
 @media @desktop-widths {
   .field-text {
-    /*margin-left: 75px;*/
 
     &--contact-style {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
       width: 50%;
+      margin-top: 60px;
+    }
+
+    &__actual {
+      display: none;
+    }
+
+    &__name {
+      margin-right: 15px;
+    }
+
+    &--tel {
+      margin-right: 79px;
     }
   }
 
   .field-text__input {
     &--contact-style {
-      width: 257px;
+      width: auto;
+      flex-grow: 1;
       height: 58px;
     }
   }

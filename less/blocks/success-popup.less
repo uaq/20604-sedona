@@ -1,6 +1,8 @@
 .success-popup {
-  position: absolute;
-  top: 2100px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   width: 100%;
   box-shadow: 0 5px 10px 5px @btn-disabled-color;
@@ -50,9 +52,6 @@
   .success-popup {
     width: 640px;
     height: 348px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 1650px;
 
     &__title {
       font-size: @font-size-xxl;
@@ -77,7 +76,5 @@
 }
 
 @media @desktop-widths {
-  .success-popup {
-    top: 1500px;
-  }
+
 }
