@@ -3,6 +3,23 @@
   padding-top: 389px;
   width: 275px;
   margin: 0 auto;
+  position: relative;
+
+  &--beautify::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 37px;
+    background: url("../img/bg-triangle.svg") 0 0 no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 596px;
+    z-index: 10;
+  }
+
+  &--reduced {
+    padding-top: 140px;
+  }
 }
 
 .welcome-slogan__title{
@@ -33,12 +50,12 @@
     width: 436px;
     margin: 0 auto;
 
-    &::before {
+    &--beautify::after {
       display: none;
     }
 
-    &::after {
-      display: none;
+    &--reduced {
+      padding-top: 290px;
     }
   }
 

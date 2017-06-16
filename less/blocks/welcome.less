@@ -1,22 +1,38 @@
 .welcome {
-  background: url("../img/bg-intro-triangle-mobile.svg") 50% 80% no-repeat,
-              url("../img/text-sedona-index.svg") 50% 0 no-repeat,
-              url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
-  background-size: 100% 389px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/text-sedona-index.svg"),
+                    url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 363px, 50% 351px, 50% 90px, 50% 0;
+  background-repeat: no-repeat;
+  background-size: 320px 27px, 768px 62px, 285px 214px, 768px 389px;
   width: 100%;
   height: 610px;
 
-  /*&--reduced {
-    background-size: 100% 158px;
+  &--reduced {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/text-sedona.svg"),
+                    url("../img/bg-back-mobile@1x.jpg");
+    background-position: 50% 132px, 50% 120px, 50% 43px, 50% -300px;
+    background-repeat: no-repeat;
+    background-size: 320px 27px, 768px 62px, 230px 40px, 768px 458px;
     height: 347px;
-  }*/
+  }
 }
 
 @media @tablet-widths {
   .welcome {
-    background-size: 100% 518px;
+    background-position: 50% 461px, 50% 442px, 50% 77px, 50% 0;
+    background-size: 700px 58px, 1220px 97px, 463px 346px, 768px 518px;
     height: 725px;
     width: 100%;
+
+      &--reduced {
+      background-position: 50% 233px, 50% 214px, 50% 90px, 50% -300px;
+      background-size: 700px 58px, 1220px 97px, 460px 80px, 768px 590px;
+      height: 497px;
+    }
   }
 }
 

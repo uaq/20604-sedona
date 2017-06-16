@@ -1,6 +1,7 @@
 .photo {
   width: 100%;
   margin: 0 auto;
+
 }
 
 .photo__item-img {
@@ -70,19 +71,28 @@
   .photo__descr {
     background-color: @photo-descr-color1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
+
+    div {
+      flex-basis: 70%;
+    }
 
     &--dark {
       background-color: @photo-descr-color2;
     }
+  }
+
+  div.photo__items-wrapper {
+    flex-basis: 82%;
   }
 }
 
 @media @desktop-widths {
   .photo__item {
     width: 33.3%;
-
+    position: relative;
 
     &:nth-of-type(2n) {
       margin-left: 0;
@@ -95,5 +105,15 @@
     &:first-of-type {
       width: 100%;
     }
+  }
+
+  .photo__descr {
+    background-color: @video-mask-color;
+    position: absolute;
+    bottom: 2%;
+  }
+
+  div.photo__items-wrapper {
+    flex-basis: 90%;
   }
 }
