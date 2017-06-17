@@ -24,7 +24,7 @@
     <main class="photo">
 
       <div class="welcome  welcome--reduced">
-        <div class="welcome-slogan">
+        <div class="welcome-slogan  welcome-slogan--reduced">
           <h1 class="welcome-slogan__title">Фото и видео</h1>
           <p class="welcome-slogan__text  welcome-slogan__text--modified">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
@@ -35,7 +35,7 @@
           <a href="img/photo-1-mobile@1x.jpg"><img src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="sedona photo"></a>
         </div>
         <div class="photo__descr">
-          <div>
+          <div class="photo__items-wrapper">
             <b class="photo__item-title">Неродные просторы</b>
             <span class="photo__item-author">Автор фото: Борис</span>
           </div>
@@ -85,11 +85,14 @@
       <article class="video-presentation">
         <b class="video-presentation__title">Все еще сомневаетесь?</b>
         <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <video width="320" height="201" poster="img/video-mobile@1x.jpg">
-          <source src="video.mp4" type="video/mp4">
-          <source src="video.ogv" type="video/ogg">
-          <source src="video.webm" type="video/webm">
-        </video>
+        <div class="video-presentation__wrapper">
+          <img width="320" height="201" src="img/video-mobile@1x.jpg">
+          <div class="video-presentation__controls">
+            <div class="video-presentation__timeline">
+              <div class="video-presentation__bar"></div>
+              <div class="video-presentation__toggle"></div>
+            </div>
+        </div>
       </article>
 
     </main>

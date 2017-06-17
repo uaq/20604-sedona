@@ -24,7 +24,7 @@
     <main class="feedback">
 
       <div class="welcome  welcome--reduced">
-        <div class="welcome-slogan">
+        <div class="welcome-slogan  welcome-slogan--reduced">
           <h1 class="welcome-slogan__title">Оставь свой отзыв</h1>
           <p class="welcome-slogan__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
@@ -33,15 +33,15 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="feedback-form__block  feedback-form__block--present-style">
           <legend>Представьтесь:</legend>
-          <label class="field-text">
+          <label class="field-text  field-text--present-style">
             <span class="field-text__name">Имя*:</span>
             <input class="field-text__input  field-text__input--present-style" id="name" type="text" name="name" placeholder="Петр" required>
           </label>
-          <label class="field-text">
+          <label class="field-text  field-text--present-style">
             <span class="field-text__name">Фамилия*:</span>
             <input class="field-text__input  field-text__input--present-style" id="surname" type="text" name="surname" placeholder="Иванов" required>
           </label>
-          <label class="field-text">
+          <label class="field-text  field-text--present-style">
             <span class="field-text__name">Отчество:</span>
             <input class="field-text__input  field-text__input--present-style" id="patronim" type="text" name="patronim" placeholder="Александрович">
           </label>
@@ -49,14 +49,16 @@
 
         <fieldset class="feedback-form__block  feedback-form__block--contact-style">
           <legend>Контактная информация:</legend>
-          <label class="field-text">
-            <span class="field-text__name">Контактный телефон*:</span>
-            <input class="field-text__input  field-text__input--contact-style  field-text__input--tel" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
-          </label>
-          <label class="field-text">
-            <span class="field-text__name">Электронная почта*:</span>
-            <input class="field-text__input  field-text__input--contact-style  field-text__input--mail" id="email" type="text" name="email" placeholder="Введите e-mail" required>
-          </label>
+          <div class="feedback-form__contact-wrapper">
+            <label class="field-text  field-text--contact-style  field-text--tel">
+              <span class="field-text__name"><span class="field-text__actual">Контактный</span> телефон*:</span>
+              <input class="field-text__input  field-text__input--contact-style" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
+            </label>
+            <label class="field-text  field-text--contact-style  field-text--mail">
+              <span class="field-text__name">Электронная почта*:</span>
+              <input class="field-text__input  field-text__input--contact-style" id="email" type="text" name="email" placeholder="Введите e-mail" required>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="feedback-form__block  feedback-form__block--impression-style">
@@ -105,18 +107,22 @@
         </fieldset>
 
         <input class="btn  feedback-form__send-btn" type="submit" name="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+
+        <span class="feedback-form__required-fields">* &mdash; обязательные поля</span>
       </form>
 
-      <div class="failure-popup hidden">
+      <div class="failure-popup  hidden">
         <h2 class="failure-popup__title">Что-то пошло не так!</h2>
         <p class="failure-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить<p>
         <button class="btn failure-popup__btn">OK</button>
       </div>
 
-      <div class="success-popup hidden">
+      <div class="success-popup  hidden">
         <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
         <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.<p>
-        <button class="btn success-popup__btn">Закрыть окно</button>
+        <div class="success-popup__wrapper">
+          <button class="btn success-popup__btn">Закрыть окно</button>
+        </div>
       </div>
 
     </main>
