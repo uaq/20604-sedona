@@ -1,4 +1,4 @@
-.failure-popup {
+.modal {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -10,7 +10,7 @@
   &__title {
     font-size: @font-size-lg;
     font-weight: 700;
-    line-height: @font-size-lg * 1.4444;
+    line-height: 1.4444;
     color: black;
     width: 220px;
     margin: 0 auto;
@@ -21,7 +21,7 @@
   &__text {
     font-size: @font-size-md;
     font-weight: 400;
-    line-height: @font-size-md * 1.5;
+    line-height: 1.5;
     color: black;
     width: 220px;
     margin: 0 auto;
@@ -31,32 +31,77 @@
   &__btn {
     font-size: @font-size-lg;
     font-weight: 700;
-    line-height: @font-size-lg * 1.4444;
-    width: 179px;
+    line-height: 1.4444;
     height: 58px;
     border: none;
     margin-bottom: 35px;
     cursor: pointer;
+    text-transform: uppercase;
+    margin: auto;
+
+    &--success {
+      width: 279px;
+    }
+
+    &--failure {
+      width: 179px;
+    }
+  }
+
+  &__wrapper {
+    background-color: @photo-descr-color-lighten;
+    display: flex;
+    height: 98px;
   }
 }
 
 @media @tablet-widths {
-  .failure-popup {
-    width: 400px;
+  .modal {
     height: 348px;
+
+    &--success {
+      width: 640px;
+    }
+
+    &--failure {
+      width: 400px;
+    }
 
     &__title {
       font-size: @font-size-xxl;
       font-weight: 700;
-      line-height: @font-size-xxl * 1.4444;
+      line-height: 1.4444;
+      &--success{
+        width: 360px;
+      }
     }
 
     &__text {
-      width: 292px;
+
+      &--success{
+        width: 425px;
+      }
+
+      &--failure {
+        width: 292px;
+      }
+
     }
 
     &__btn {
-      width: 272px;
+
+      &--success{
+        width: 458px;
+      }
+
+      &--failure{
+        width: 272px;
+      }
+
+    }
+
+    &__wrapper {
+      height: 148px;
     }
   }
 

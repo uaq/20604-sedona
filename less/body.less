@@ -2,7 +2,7 @@ body {
   font-family: @font-family;
   font-size: @font-size-md;
   font-weight: 400;
-  line-height: @font-size-md * 1.5;
+  line-height: 1.5;
   text-transform: uppercase;
   color: black;
   min-width: 320px;
@@ -12,12 +12,19 @@ body {
 
 a:active, a:focus { outline: none; }
 
-input, textarea {outline:none;}
-input:active, textarea:active {outline:none;}
+input, textarea {
+  outline:none;
+  font-size: @font-size-lg;
+  font-weight: 700;
+}
+
+input:active,
+textarea:active {
+  outline:none;
+}
 :focus {outline:none;}
 textarea {resize:none;}
-textarea {resize:vertical;}
-textarea {resize:horizontal;}
+
 
 @media @desktop-widths {
   body {

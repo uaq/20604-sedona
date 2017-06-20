@@ -2,14 +2,22 @@
   display: block;
   margin: 20px auto;
   text-align: left;
+  padding-left: 8px;
+  padding-right: 9px;
 
   &:first-of-type {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
-  &--present-style {
+  &--present-yourself-style {
     display: flex;
     align-items: center;
+
+    .field-text__input {
+      flex-grow: 1;
+      width: 100%;
+      margin-left: 16px;
+    }
   }
 
   &--contact-style {
@@ -17,6 +25,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    margin-top: 18px;
+    margin-bottom: 12px;
+
+    .field-text__name {
+      margin-left: 22px;
+      margin-bottom: 6px;
+    }
+
+    .field-text__input {
+      width: 100%;
+    }
   }
 
   &--tel {
@@ -62,7 +81,7 @@
       content: "";
       position: absolute;
       bottom: 20px;
-      right: 20px;
+      right: 21px;
       width: 16px;
       height: 16px;
       background: url("../img/icon-mail.svg") 0px 0px no-repeat;
@@ -73,16 +92,16 @@
 .field-text__name {
   font-size: @font-size-md;
   font-weight: 400;
-  line-height: @font-size-md * 1.85714;
+  line-height: 1.85714;
   color: @secondary-color;
 }
 
 .field-text__input {
   height: 58px;
-  background-color: @photo-descr-color1;
+  background-color: @photo-descr-color-lighten;
   border: none;
   box-sizing: border-box;
-  padding-left: 15px;
+  padding-left: 20px;
 
 
   &:hover {
@@ -93,20 +112,18 @@
     background-color: white;
     border: 4px solid @btn-disabled-color;
   }
-
-  &--present-style {
-    flex-grow: 1;
-    width: 100%;
-  }
-
-  &--contact-style {
-    width: 100%;
-  }
 }
 
 
 @media @tablet-widths {
   .field-text {
+
+    &--contact-style {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
 
 
     &:first-of-type {
@@ -125,7 +142,24 @@
       justify-content: flex-start;
       align-items: center;
       width: 50%;
-      margin-top: 60px;
+      margin-top: 67px;
+
+      .field-text__input {
+        width: auto;
+        flex-grow: 1;
+        height: 58px;
+        max-width: 316px;
+      }
+
+      .field-text__name {
+        margin-left: 0px;
+      }
+    }
+
+    &--present-yourself-style {
+      .field-text__name {
+        margin-right: 0px;
+      }
     }
 
     &__actual {
@@ -137,15 +171,13 @@
     }
 
     &--tel {
-      margin-right: 79px;
-    }
-  }
+      &::before {
+        right: 80px;
+      }
 
-  .field-text__input {
-    &--contact-style {
-      width: auto;
-      flex-grow: 1;
-      height: 58px;
+      &::after {
+        right: 99px;
+      }
     }
   }
 }
