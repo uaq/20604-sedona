@@ -2,8 +2,39 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url( "img/preview/sedona-form-mobile.jpg" );
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url( "img/preview/sedona-form-tablet.jpg" );
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1200px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "img/preview/sedona-form-desktop.jpg" );
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
     <base href="https://htmlacademy-adaptive.github.io/20604-sedona/5/">
 </head>
 
@@ -25,25 +56,25 @@
 
       <div class="welcome  welcome--reduced">
         <div class="welcome-slogan  welcome-slogan--reduced">
-          <h1 class="welcome-slogan__title">Оставь свой отзыв</h1>
+          <h1 class="welcome-slogan__title">Оставьте свой отзыв</h1>
           <p class="welcome-slogan__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
       </div>
 
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="feedback-form__block  feedback-form__block--present-style">
+        <fieldset class="feedback-form__block  feedback-form__block--present-yourself-style">
           <legend>Представьтесь:</legend>
-          <label class="field-text  field-text--present-style">
+          <label class="field-text  field-text--present-yourself-style">
             <span class="field-text__name">Имя*:</span>
-            <input class="field-text__input  field-text__input--present-style" id="name" type="text" name="name" placeholder="Петр" required>
+            <input class="field-text__input" id="name" type="text" name="name" placeholder="Петр" required>
           </label>
-          <label class="field-text  field-text--present-style">
+          <label class="field-text  field-text--present-yourself-style">
             <span class="field-text__name">Фамилия*:</span>
-            <input class="field-text__input  field-text__input--present-style" id="surname" type="text" name="surname" placeholder="Иванов" required>
+            <input class="field-text__input" id="surname" type="text" name="surname" placeholder="Иванов" required>
           </label>
-          <label class="field-text  field-text--present-style">
+          <label class="field-text  field-text--present-yourself-style">
             <span class="field-text__name">Отчество:</span>
-            <input class="field-text__input  field-text__input--present-style" id="patronim" type="text" name="patronim" placeholder="Александрович">
+            <input class="field-text__input" id="patronim" type="text" name="patronim" placeholder="Александрович">
           </label>
         </fieldset>
 
@@ -52,11 +83,11 @@
           <div class="feedback-form__contact-wrapper">
             <label class="field-text  field-text--contact-style  field-text--tel">
               <span class="field-text__name"><span class="field-text__actual">Контактный</span> телефон*:</span>
-              <input class="field-text__input  field-text__input--contact-style" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
+              <input class="field-text__input" id="phone" type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone" placeholder="Введите телефон" required>
             </label>
             <label class="field-text  field-text--contact-style  field-text--mail">
               <span class="field-text__name">Электронная почта*:</span>
-              <input class="field-text__input  field-text__input--contact-style" id="email" type="text" name="email" placeholder="Введите e-mail" required>
+              <input class="field-text__input" id="email" type="email" name="email" placeholder="Введите e-mail" required>
             </label>
           </div>
         </fieldset>
@@ -111,17 +142,17 @@
         <span class="feedback-form__required-fields">* &mdash; обязательные поля</span>
       </form>
 
-      <div class="failure-popup  hidden">
-        <h2 class="failure-popup__title">Что-то пошло не так!</h2>
-        <p class="failure-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить<p>
-        <button class="btn failure-popup__btn">OK</button>
+      <div class="modal  modal--failure  hidden">
+        <h2 class="modal__title">Что-то пошло не так!</h2>
+        <p class="modal__text  modal__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить<p>
+        <button class="btn  modal__btn  modal__btn--failure">OK</button>
       </div>
 
-      <div class="success-popup  hidden">
-        <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
-        <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.<p>
-        <div class="success-popup__wrapper">
-          <button class="btn success-popup__btn">Закрыть окно</button>
+      <div class="modal  modal--success  hidden">
+        <h2 class="modal__title  modal__title--success">Ваш отзыв отправлен!</h2>
+        <p class="modal__text  modal__text--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.<p>
+        <div class="modal__wrapper">
+          <button class="btn  modal__btn  modal__btn--success">Закрыть окно</button>
         </div>
       </div>
 
