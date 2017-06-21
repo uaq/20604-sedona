@@ -1,28 +1,41 @@
 .welcome-slogan{
   height: 221px;
   padding-top: 389px;
-  width: 270px;
+  width: 275px;
   margin: 0 auto;
+  position: relative;
+
+  &--beautify::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 37px;
+    background: url("../img/bg-triangle.svg") 0 0 no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 590px;
+    z-index: 10;
+  }
+
+  &--reduced {
+    padding-top: 153px;
+  }
 }
 
 .welcome-slogan__title{
   font-size: @font-size-lg;
   font-weight: 700;
-  line-height: @font-size-lg * 1.4444;
+  line-height: 1.4444;
   color: black;
-  margin-top: 45px;
+  margin-top: 39px;
 }
 
 .welcome-slogan__text{
   font-size: @font-size-md;
   font-weight: 400;
-  line-height: @font-size-md * 1.5;
+  line-height: 1.71428;
   color: @secondary-color;
-  margin-top: 42px;
-
-  &--modified {
-    line-height: @font-size-md * 1.71428;
-  }
+  margin-top: 33px;
 }
 
 
@@ -30,11 +43,40 @@
   .welcome-slogan{
     height: 221px;
     padding-top: 518px;
-    width: 508px;
+    width: 485px;
     margin: 0 auto;
+
+    &--beautify::after {
+      display: none;
+    }
+
+    &--reduced {
+      padding-top: 290px;
+
+      .welcome-slogan__title {
+        font-size: @font-size-xxl;
+        margin-top: 66px;
+      }
+    }
+  }
+
+  .welcome-slogan__title {
+    font-size: @font-size-xl;
+    margin-top: 47px;
+  }
+
+  .welcome-slogan__text{
+    margin-top: 25px;
   }
 }
 
 @media @desktop-widths {
+  .welcome-slogan{
 
+    &--reduced {
+      .welcome-slogan__title {
+        margin-top: 113px;
+      }
+    }
+  }
 }

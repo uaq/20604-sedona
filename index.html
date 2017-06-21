@@ -2,8 +2,39 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url( "img/preview/sedona-index-mobile.jpg" );
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url( "img/preview/sedona-index-tablet.jpg" );
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1200px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "img/preview/sedona-index-desktop.jpg" );
+        }
+      }
+
+      BODY {
+        opacity: .5;
+      }
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
 
   <body>
@@ -23,16 +54,16 @@
     <main class="main">
 
       <div class="welcome">
-        <div class="welcome-slogan">
+        <div class="welcome-slogan  welcome-slogan--beautify">
           <h1 class="welcome-slogan__title">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
-          <p class="welcome-slogan__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          <p class="welcome-slogan__text">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
         </div>
       </div>
 
 
       <section class="advantage  advantage--full-width">
         <div class="advantage__header  advantage__header--number-one-state">
-          <h2 class="advantage__title">Настоящий городок</h2>
+          <h2 class="advantage__title  advantage__title--number-one-state">Настоящий городок</h2>
           <span class="advantage__num">&mdash; №1 &mdash;</span>
           <div class="advantage__text"><p>Седона не аттракцион для туристов, там течет своя жизнь</p></div>
         </div>
@@ -59,7 +90,7 @@
 
       <section class="advantage  advantage--full-width  advantage--inverted-order">
         <div class="advantage__header  advantage__header--number-two-state">
-          <h2 class="advantage__title">Там есть мост дьявола</h2>
+          <h2 class="advantage__title  advantage__title--number-two-state">Там есть мост дьявола</h2>
           <span class="advantage__num">&mdash; №2 &mdash;</span>
           <div class="advantage__text"><p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p></div>
         </div>

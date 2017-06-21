@@ -6,19 +6,61 @@
 .feedback-form__block {
   font-size: @font-size-lg;
   font-weight: 700;
-  line-height: @font-size-lg * 1.4444;
+  line-height: 1.4444;
   color: black;
   border: none;
   border-top: 1px solid @separator-line-color;
+  position: relative;
+  box-sizing: border-box;
+
+  legend {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 245px;
+  }
+
+  &--present-yourself-style {
+    height: 305px;
+  }
+
+  &--contact-style {
+    padding-right: 18px;
+  }
+
+  &--impression-style {
+    padding-top: 15px;
+  }
+
+  &--sight-style {
+    padding-bottom: 7px;
+  }
+
+  &--emotion-style {
+    margin-top: 30px;
+  }
+}
+
+.feedback-form__block-wrapper {
+  margin: 0 auto;
+  margin-top: 44px;
+  width: 300px;
 }
 
 .feedback-form__send-btn {
-  line-height: @font-size-xl * 1.23809;
+  line-height: 1.23809;
   font-size: @font-size-xl;
   width: 280px;
   height: 58px;
   cursor: pointer;
   border: none;
+  margin-top: 30px;
+  margin-bottom: 38px;
+}
+
+.feedback-form__required-fields {
+  display: none;
 }
 
 @media @tablet-widths {
@@ -26,24 +68,52 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
+    margin-top: 43px;
+    margin-bottom: 23px;
   }
 
   .feedback-form__block {
     margin-left: 60px;
     margin-right: 60px;
+    font-size: @font-size-xl;
+    position: static;
 
-    &--present-style {
-      width: 50% - 1px;
+    legend {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+
+    &--present-yourself-style {
+      width: 50%;
       order: 2;
+      padding-top: 38px;
+      padding-bottom: 0;
+      padding-right: 50px;
+      padding-left: 48px;
       margin: 0;
-      padding: 0;
       border: none;
-      border-left: 1px solid @separator-line-color;
+      min-width: 0;
+
+      legend {
+        text-align: left;
+        margin-left: 11px;
+      }
     }
 
     &--contact-style {
       width: 100%;
       order: 3;
+      margin-top: 62px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+
+      legend {
+        width: 398px;
+      }
     }
 
     &--impression-style {
@@ -52,16 +122,36 @@
       margin: 0;
       padding: 0;
       border: none;
+      border-right: 1px solid @separator-line-color;
+      padding-top: 40px;
+      padding-left: 15px;
+
+      legend {
+        width: 300px;
+      }
     }
 
     &--sight-style {
       width: 100%;
       order: 4;
+      margin-top: 9px;
+      padding-right: 0px;
+      padding-bottom: 41px;
+
+      legend {
+        width: 398px;
+      }
     }
 
     &--emotion-style {
       width: 100%;
       order: 5;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      legend {
+        width: 398px;
+      }
     }
   }
 
@@ -69,20 +159,74 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 0;
+    width: 500px;
+    padding-left: 120px;
   }
 
   .feedback-form__send-btn {
-    width: 44%;
+    width: 42%;
     order: 6;
     margin-left: 60px;
+    margin-top: 35px;
+  }
+
+  .feedback-form__required-fields {
+    display: block;
+    order: 7;
+    align-self: center;
+    margin-right: 60px;
   }
 }
 
 @media @desktop-widths {
+  .feedback-form {
+    margin-top: 79px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .feedback-form__contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-form__block-wrapper {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    justify-content: space-between;
+  }
+
   .feedback-form__block {
 
+    &--present-yourself-style {
+      padding-left: 70px;
+      padding-right: 50px;
+      padding-top: 34px;
+    }
+
+    &--contact-style {
+      margin-top: 57px;
+    }
+
+    &--impression-style {
+      padding-top: 37px;
+
+      legend {
+        padding-left: 10px;
+      }
+    }
+
+    &--sight-style {
+      margin-top: 7px;
+      padding-top: 2px;
+    }
   }
+
   .feedback-form__send-btn {
-    margin-left: 10%;
+    width: 480px;
+    margin-bottom: 44px;
   }
 }
