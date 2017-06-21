@@ -57,6 +57,8 @@ input[type="checkbox"]:checked + .field-checkbox__checkbox:active::after {
 @media @tablet-widths {
   .field-checkbox {
     width: 50%;
+    padding-top: 44px;
+    padding-bottom: 11px;
 
     &--bridge-style {
       order: 1;
@@ -74,16 +76,37 @@ input[type="checkbox"]:checked + .field-checkbox__checkbox:active::after {
       order: 4;
     }
   }
+
+  .field-checkbox__name {
+
+    &::before {
+      top: 32px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .field-checkbox__name::after {
+    top: 54px;
+  }
 }
 
 @media @desktop-widths {
   .field-checkbox {
     width: auto;
-    margin-left: 30px;
-    margin-right: 0px;
+    margin-left: 27px;
+    margin-right: 3px;
+    padding-top: 48px;
+    padding-bottom: 7px;
+  }
 
-    &__name {
-      margin-left: 40px;
+  .field-checkbox__name {
+    margin-left: 40px;
+
+    &::before {
+      top: 37px;
     }
+  }
+
+  input[type="checkbox"]:checked + .field-checkbox__name::after {
+    top: 58px;
   }
 }
