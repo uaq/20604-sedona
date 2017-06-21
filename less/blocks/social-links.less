@@ -7,12 +7,30 @@
   margin: 0 auto;
   padding-left: 0px;
 
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: white;
+    }
+  }
+
   a:hover {
     background-color: @btn-hover-color;
+
+    svg {
+      fill: white;
+    }
   }
 
   a:active {
     background-color: @btn-active-color;
+
+    svg {
+      fill: @social-down-color;
+    }
   }
 }
 
@@ -20,24 +38,21 @@
   display: block;
   width: 46px;
   height: 46px;
-  background: @primary-color url("../img/icon-twitter.svg") 16px 17px no-repeat;
-  text-indent: -9999px;
+  background-color: @primary-color;
 }
 
 .social-link__facebook {
   display: block;
   width: 46px;
   height: 46px;
-  background: @primary-color url("../img/icon-facebook.svg") 19px 14px no-repeat;
-  text-indent: -9999px;
+  background-color: @primary-color;
 }
 
 .social-link__youtube {
   display: block;
   width: 46px;
   height: 46px;
-  background: @primary-color url("../img/icon-youtube.svg") 14px 17px no-repeat;
-  text-indent: -9999px;
+  background-color: @primary-color;
 }
 
 
