@@ -44,6 +44,7 @@
       <symbol viewBox="0 0 8.672 18.944" id="icon-facebook"><path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/></symbol>
       <symbol viewBox="0 0 19.979 14.015" id="icon-youtube"><path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/></symbol>
     </svg>
+
     <header class="page-header">
       <nav class="main-nav">
         <ul class="nav" id="nav">
@@ -52,7 +53,14 @@
           <li class="nav__item  nav__item--active"><a href="">Форма отзыва</a></li>
           <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
-        <a class="toggler" href="" id="toggler"><span></span></a>
+        <a class="main-nav__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип города Sedona"/>
+          </picture>
+        </a>
+        <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div>
       </nav>
     </header>
 
@@ -178,5 +186,6 @@
         <a href="https://htmlacademy.ru/intensive/adaptive"><svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-html-academy"></use></svg></a>
       </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
