@@ -27,7 +27,6 @@
   font-weight: 400;
   line-height: 1.5;
   color: white;
-  margin-bottom: 15px;
   width: 275px;
   margin: 0 auto;
 }
@@ -38,6 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 
   &--passiv-style {
     background-color: @passiv-style-color;
@@ -161,6 +161,9 @@
   .advantage__header {
     width: 33%;
     height: 256px;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 31px;
 
     &--passiv-style {
       width: 100%;
@@ -174,6 +177,10 @@
     &--number-one-state,
     &--number-two-state {
       height: 256px;
+
+      .advantage__num {
+        margin-left: -10px;
+      }
     }
 
     &--road-style::before {
@@ -188,6 +195,12 @@
   .advantage__title {
     font-size: @font-size-xl;
     width: 151px;
+    margin-bottom: -2px;
+
+    &--number-one-state,
+    &--number-two-state {
+      margin-top: 5px;
+    }
   }
 
   .advantage__text {
@@ -266,7 +279,7 @@
   }
 
   .advantage__header {
-
+    padding-bottom: 51px;
 
     &--passiv-style {
 
@@ -275,9 +288,33 @@
         width: 275px;
       }
     }
+
+    .advantage__num {
+      margin-left: auto;
+    }
+
+    &--number-one-state {
+      padding-top: 42px;
+      padding-bottom: 45px;
+    }
+
+    &--number-two-state {
+      padding-top: 44px;
+      padding-bottom: 43px;
+
+      .advantage__num, .advantage__text {
+        width: 256px;
+      }
+    }
   }
 
   .advantage__list-item-text {
     width: 285px;
+  }
+
+  .advantage__list-item--souvenir-style {
+    .advantage__list-item-text {
+      width: 260px;
+    }
   }
 }
