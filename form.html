@@ -4,37 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* По умолчанию мобильный макет */
-        /*background-image: url( "img/preview/sedona-form-mobile.jpg" );*/
-      }
-      /* Планшет */
-      @media ( min-width: 768px ) {
-        HTML {
-          /* Планшетный макет */
-          /*background-image: url( "img/preview/sedona-form-tablet.jpg" );*/
-        }
-      }
-      /* Десктоп */
-      @media ( min-width: 1200px ) {
-        HTML {
-          /* Десктопный макет */
-          /*background-image: url( "img/preview/sedona-form-desktop.jpg" );*/
-        }
-      }
-
-      BODY {
-        /*opacity: .5;*/
-      }
-    </style>
-    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-    <script src="../node_modules/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -76,7 +46,7 @@
 
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="feedback-form__block  feedback-form__block--present-yourself-style">
-          <legend>Представьтесь:</legend>
+          <div class="feedback-form__legend">Представьтесь:</div>
           <label class="field-text  field-text--present-yourself-style">
             <span class="field-text__name">Имя*:</span>
             <input class="field-text__input" id="name" type="text" name="name" placeholder="Петр" required>
@@ -92,7 +62,7 @@
         </fieldset>
 
         <fieldset class="feedback-form__block  feedback-form__block--contact-style">
-          <legend>Контактная информация:</legend>
+          <div class="feedback-form__legend">Контактная информация:</div>
           <div class="feedback-form__contact-wrapper">
             <label class="field-text  field-text--contact-style  field-text--tel">
               <span class="field-text__name"><span class="field-text__actual">Контактный</span> телефон*:</span>
@@ -106,7 +76,7 @@
         </fieldset>
 
         <fieldset class="feedback-form__block  feedback-form__block--impression-style">
-          <legend>Ваше общее впечатление:</legend>
+          <div class="feedback-form__legend">Ваше общее впечатление:</div>
           <label class="field-radio">
             <input class="field-radio__input" type="radio" name="marker" id="positive" value="positive" checked>
             <span class="field-radio__name">Скорее положительное</span>
@@ -122,7 +92,7 @@
         </fieldset>
 
         <fieldset class="feedback-form__block  feedback-form__block--sight-style">
-          <legend>Посещенные достопримечательности:</legend>
+          <div class="feedback-form__legend">Посещенные достопримечательности:</div>
           <div class="feedback-form__block-wrapper">
             <label class="field-checkbox  field-checkbox--bridge-style">
               <input class="field-checkbox__input" type="checkbox" name="bridge" id="bridge" value="bridge" checked>
@@ -144,7 +114,7 @@
         </fieldset>
 
         <fieldset class="feedback-form__block  feedback-form__block--emotion-style">
-          <legend>Опишите свои эмоции:</legend>
+          <div class="feedback-form__legend">Опишите свои эмоции:</div>
           <label class="field-textarea">
             <textarea class="field-textarea__input" name="feedback-text" rows="6" cols="27" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>

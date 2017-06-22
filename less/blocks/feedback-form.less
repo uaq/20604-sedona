@@ -13,7 +13,7 @@
   position: relative;
   box-sizing: border-box;
 
-  legend {
+  .feedback-form__legend {
     position: absolute;
     top: 20px;
     left: 50%;
@@ -79,11 +79,14 @@
     font-size: @font-size-xl;
     position: static;
 
-    legend {
+
+    .feedback-form__legend {
       position: static;
       top: auto;
       left: auto;
       transform: none;
+      background-color: white;
+      margin: 0 auto;
     }
 
     &--present-yourself-style {
@@ -97,22 +100,27 @@
       border: none;
       min-width: 0;
 
-      legend {
+
+      .feedback-form__legend {
         text-align: left;
         margin-left: 11px;
+        margin-top: -37px;
+        margin-bottom: 56px;
       }
     }
 
     &--contact-style {
       width: 100%;
       order: 3;
-      margin-top: 62px;
+      margin-top: 77px;
       padding-left: 0px;
       padding-right: 0px;
 
 
-      legend {
+      .feedback-form__legend {
         width: 398px;
+        margin-top: -22px;
+        margin-bottom: 23px;
       }
     }
 
@@ -126,20 +134,27 @@
       padding-top: 40px;
       padding-left: 15px;
 
-      legend {
+      .feedback-form__legend {
         width: 300px;
+        margin-top: -38px;
+        margin-bottom: 38px;
+        padding-right: 6px;
       }
     }
 
     &--sight-style {
       width: 100%;
       order: 4;
-      margin-top: 9px;
+      margin-top: 40px;
       padding-right: 0px;
       padding-bottom: 41px;
 
-      legend {
+
+      .feedback-form__legend {
         width: 398px;
+        margin-top: -37px;
+        margin-bottom: 6px;
+        padding-right: 14px;
       }
     }
 
@@ -148,9 +163,12 @@
       order: 5;
       padding-left: 0px;
       padding-right: 0px;
+      margin-top: 45px;
 
-      legend {
+      .feedback-form__legend {
         width: 398px;
+        margin-top: -23px;
+        margin-bottom: 7px;
       }
     }
   }
@@ -210,20 +228,30 @@
     }
 
     &--contact-style {
-      margin-top: 57px;
+      margin-top: 72px;
+
+      .feedback-form__legend {
+        margin-bottom: 6px;
+      }
     }
 
     &--impression-style {
       padding-top: 37px;
 
-      legend {
-        padding-left: 10px;
+
+      .feedback-form__legend {
+        padding-right: 0px;
       }
     }
 
     &--sight-style {
-      margin-top: 7px;
+      margin-top: 37px;
       padding-top: 2px;
+
+      .feedback-form__legend {
+        margin-top: -32px;
+        margin-bottom: 1px;
+      }
     }
   }
 
