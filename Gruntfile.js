@@ -20,10 +20,7 @@ module.exports = function(grunt) {
           processors: [
             require("autoprefixer")({browsers: [
               "last 2 versions"
-            ]}),
-            require("css-mqpacker")({
-              sort: true
-            })
+            ]})
           ]
         },
         src: "css/*.css"
