@@ -1,15 +1,36 @@
+.main-nav {
+
+  &__logo {
+    width: 102px;
+    height: 84px;
+    position: absolute;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 223px;
+    z-index: 10;
+
+    &--top-state {
+      top: 0px;
+    }
+  }
+}
+
 @media @tablet-widths {
   .main-nav {
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      width: 102px;
-      height: 84px;
-      background: url("../img/logo-sedona-mobile.svg") 0px 0px no-repeat;
+    &__logo {
+      top: 0px;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .main-nav {
+
+    &__logo {
+      width: 187px;
+      height: 97px;
     }
   }
 }
