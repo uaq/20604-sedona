@@ -11,25 +11,25 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* По умолчанию мобильный макет */
-        background-image: url( "img/preview/sedona-photo-mobile.jpg" );
+        /*background-image: url( "img/preview/sedona-photo-mobile.jpg" );*/
       }
       /* Планшет */
       @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "img/preview/sedona-photo-tablet.jpg" );
+          /*background-image: url( "img/preview/sedona-photo-tablet.jpg" );*/
         }
       }
       /* Десктоп */
       @media ( min-width: 1200px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "img/preview/sedona-photo-desktop.jpg" );
+          /*background-image: url( "img/preview/sedona-photo-desktop.jpg" );*/
         }
       }
 
       BODY {
-        opacity: .5;
+        /*opacity: .5;*/
       }
     </style>
     <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
@@ -57,20 +57,20 @@
 
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="nav" id="nav">
+        <ul class="nav" id="nav"><!-- Класс сворачивающий меню nav--hidden" -->
           <li class="nav__item"><a href="index.html">Главная</a></li>
           <li class="nav__item  nav__item--active  nav__item--flex-growed"><a href="">Фото и видео</a></li>
           <li class="nav__item"><a href="form.html">Форма отзыва</a></li>
           <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
-        <a class="main-nav__logo" href="index.html">
+        <a class="main-nav__logo" href="index.html"><!-- Класс корректирующий положение логотипа при закрытом меню main-nav__logo--top-state -->
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
             <img src="img/logo-sedona-mobile.svg" alt="Логотип города Sedona"/>
           </picture>
         </a>
-        <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div>
+        <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div><!-- Класс гамбургера в открытом состоянии toggler__btn--opened -->
       </nav>
     </header>
 
@@ -86,7 +86,13 @@
 
       <article class="photo__item">
         <div class="photo__item-img">
-          <a href="img/photo-1-mobile@1x.jpg"><img src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="sedona photo"></a>
+          <a href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Sedona road photo">
+            </picture>
+          </a>
         </div>
         <div class="photo__descr  photo__descr--biggest">
           <div class="photo__items-wrapper">
@@ -99,7 +105,13 @@
 
       <article class="photo__item">
         <div class="photo__item-img">
-          <a href="img/photo-2-mobile@1x.jpg"><img src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="sedona photo"></a>
+          <a href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Sedona flowers photo">
+            </picture>
+          </a>
         </div>
         <div class="photo__descr">
           <div>
@@ -112,7 +124,13 @@
 
       <article class="photo__item">
         <div class="photo__item-img">
-          <a href="img/photo-3-mobile@1x.jpg"><img src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="sedona photo"></a>
+          <a href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Sedona road to North photo">
+            </picture>
+          </a>
         </div>
         <div class="photo__descr  photo__descr--dark">
           <div>
@@ -125,7 +143,13 @@
 
       <article class="photo__item">
         <div class="photo__item-img">
-          <a href="img/photo-4-mobile@1x.jpg"><img src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="sedona photo"></a>
+          <a href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Sedona horror bridge photo">
+            </picture>
+          </a>
         </div>
         <div class="photo__descr">
           <div>
@@ -140,7 +164,11 @@
         <b class="video-presentation__title">Все еще сомневаетесь?</b>
         <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="video-presentation__wrapper">
-          <img width="320" height="201" src="img/video-mobile@1x.jpg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Video-player">
+          </picture>
           <div class="video-presentation__controls">
             <div class="video-presentation__timeline">
               <div class="video-presentation__bar"></div>

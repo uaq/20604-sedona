@@ -11,25 +11,25 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* По умолчанию мобильный макет */
-        background-image: url( "img/preview/sedona-form-mobile.jpg" );
+        /*background-image: url( "img/preview/sedona-form-mobile.jpg" );*/
       }
       /* Планшет */
       @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "img/preview/sedona-form-tablet.jpg" );
+          /*background-image: url( "img/preview/sedona-form-tablet.jpg" );*/
         }
       }
       /* Десктоп */
       @media ( min-width: 1200px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "img/preview/sedona-form-desktop.jpg" );
+          /*background-image: url( "img/preview/sedona-form-desktop.jpg" );*/
         }
       }
 
       BODY {
-        opacity: .5;
+        /*opacity: .5;*/
       }
     </style>
     <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
@@ -47,20 +47,20 @@
 
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="nav" id="nav">
+        <ul class="nav" id="nav"><!-- Класс сворачивающий меню nav--hidden" -->
           <li class="nav__item"><a href="index.html">Главная</a></li>
           <li class="nav__item  nav__item--flex-growed"><a href="photo.html">Фото и видео</a></li>
           <li class="nav__item  nav__item--active"><a href="">Форма отзыва</a></li>
           <li class="nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
-        <a class="main-nav__logo" href="index.html">
+        <a class="main-nav__logo" href="index.html"><!-- Класс корректирующий положение логотипа при закрытом меню main-nav__logo--top-state -->
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
             <img src="img/logo-sedona-mobile.svg" alt="Логотип города Sedona"/>
           </picture>
         </a>
-        <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div>
+        <div class="toggler"><button class="toggler__btn  toggler__btn--opened" id="toggler-btn"></button></div><!-- Класс гамбургера в открытом состоянии toggler__btn--opened -->
       </nav>
     </header>
 

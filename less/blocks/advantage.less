@@ -54,7 +54,7 @@
   }
 
   &--number-one-state {
-    height: 210px;
+    height: 208px;
   }
 
   &--number-two-state {
@@ -159,7 +159,7 @@
   }
 
   .advantage__header {
-    width: 33%;
+    width: 33.5%;
     height: 256px;
     justify-content: space-between;
     padding-top: 36px;
@@ -177,10 +177,6 @@
     &--number-one-state,
     &--number-two-state {
       height: 256px;
-
-      .advantage__num {
-        margin-left: -10px;
-      }
     }
 
     &--road-style::before {
@@ -203,17 +199,25 @@
     }
   }
 
+  .advantage__num {
+    width: 100%;
+  }
+
   .advantage__text {
     width: 162px;
   }
 
   .advantage__photo {
-    width: 67%;
+    width: 66.5%;
     height: 256px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     img {
-      max-width: 100%;
-      height: 256px;
+      display: block;
+      width: 100%;
     }
   }
 
