@@ -40,6 +40,7 @@
     width: 280px;
     height: 111px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 
   &__timeline {
@@ -103,24 +104,22 @@
 
   &__replay {
     flex-grow: 4;
-
-    svg {
-      position: relative;
-      right: 30%;
-    }
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
   }
 
   &__subtitles {
     flex-grow: 1;
-
-    svg {
-      position: relative;
-      left: 13%;
-    }
+    display: flex;
+    justify-content: center;
+    padding-right: 1px;
   }
 
   &__fullscreen {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -190,17 +189,18 @@
 
     &__replay {
       flex-grow: 6;
-
-      svg {
-        right: 41%;
-      }
+      padding-left: 33px;
     }
 
     &__subtitles {
+      justify-content: flex-end;
+      padding-left: 275px;
+    }
 
-      svg {
-        left: 48%;
-      }
+    &__fullscreen {
+      flex-grow: 2;
+      justify-content: center;
+      padding-right: 12px;
     }
   }
 }
@@ -241,10 +241,14 @@
 
     &__replay {
       flex-grow: 8;
+    }
 
-      svg {
-        right: 44%;
-      }
+    &__subtitles {
+      padding-left: 379px;
+    }
+
+    &__fullscreen {
+      padding-right: 16px;
     }
   }
 }
