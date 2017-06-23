@@ -11,6 +11,6 @@ function menuToggler() {
 window.onload = menuToggler;
 
 btn.addEventListener("click", function(event) {
-    event.preventDefault();
-    menuToggler();
+  event.preventDefault();
+  menuToggler();
 });

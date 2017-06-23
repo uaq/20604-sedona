@@ -26,7 +26,7 @@
     "buildold": "grunt lessold && grunt postcssold",
     "startold": "npm run buildold && grunt serveold",
     "start": "npm run build && grunt serve",
-	  "grunt": "grunt",
+    "grunt": "grunt",
     "build": "grunt build"
   },
   "editorconfig-cli": [
