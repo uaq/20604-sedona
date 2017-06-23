@@ -204,12 +204,12 @@
   }
 
   .advantage__text {
-    width: 162px;
+    width: 168px;
   }
 
   .advantage__photo {
     width: 66.5%;
-    height: 256px;
+    height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -218,6 +218,13 @@
     img {
       display: block;
       width: 100%;
+    }
+
+    picture,
+    img {
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
     }
   }
 
@@ -310,6 +317,10 @@
         width: 256px;
       }
     }
+  }
+
+  .advantage__photo {
+    height: 256px;
   }
 
   .advantage__list-item-text {
