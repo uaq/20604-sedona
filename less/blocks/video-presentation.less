@@ -7,8 +7,10 @@
     font-weight: 700;
     line-height: 1.4444;
     color: black;
+    margin: 0 auto;
     margin-top: 32px;
     display: block;
+    width: 320px;
   }
 
   &__text {
@@ -22,51 +24,28 @@
     width: 270px;
   }
 
-  &__controls {
+  &__wrapper {
     position: relative;
-    width: 280px;
-    height: 66px;
+    margin-bottom: 134px;
+  }
+
+  &__controls {
+    position: absolute;
     left: 50%;
-    top: -6px;
     transform: translateX(-50%);
-    background-color: @photo-descr-color-lighten;
-
-    button {
-      cursor: pointer;
-      border: none;
-      background-color: transparent;
-      position: absolute;
-      transform: translateY(-50%);
-
-      svg {
-        fill: @video-controls-color;
-      }
-
-      &:hover {
-
-        svg {
-          fill: @secondary-color;
-        }
-      }
-
-      &:active {
-
-        svg {
-          fill: @video-controls-down-color;
-        }
-      }
-    }
+    bottom: -60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px;
+    height: 111px;
+    margin: 0 auto;
   }
 
   &__timeline {
-    position: absolute;
+    position: relative;
     height: 45px;
     width: 280px;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-left: 15px;
-    padding-right: 15px;
     background-color: @video-mask-color;
     box-sizing: border-box;
   }
@@ -91,21 +70,57 @@
     background: white;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
+  }
+
+  &__buttons {
+    width: 280px;
+    height: 66px;
+    background-color: @photo-descr-color-lighten;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      svg {
+        cursor: pointer;
+        fill: @video-controls-color;
+
+        &:hover {
+          fill: @secondary-color;
+        }
+
+        &:active {
+          fill: @video-controls-down-color;
+        }
+      }
+    }
   }
 
   &__replay {
-    top: 50%;
-    left: 7%;
+    flex-grow: 4;
+
+    svg {
+      position: relative;
+      right: 30%;
+    }
   }
 
   &__subtitles {
-    top: 50%;
-    left: 60%;
+    flex-grow: 1;
+
+    svg {
+      position: relative;
+      left: 13%;
+    }
   }
 
   &__fullscreen {
-    top: 50%;
-    left: 83%;
+    flex-grow: 1;
   }
 }
 
@@ -124,6 +139,7 @@
 
     &__title {
       font-size: @font-size-xxl;
+      width: 648px;
     }
 
     &__text {
@@ -133,12 +149,27 @@
 
     &__wrapper {
       margin-top: 74px;
+      margin-bottom: 34px;
     }
 
     &__controls {
+      height: 92px;
       width: 648px;
+      bottom: 6px;
+    }
+
+    &__timeline {
+      height: 92px;
+      width: 648px;
+      padding: 0;
+    }
+
+    &__buttons {
+      position: absolute;
       background-color: transparent;
-      height: 34px;
+      height: 92px;
+      width: 648px;
+      top: 0%;
 
       button {
 
@@ -146,13 +177,6 @@
           fill: white;
         }
       }
-    }
-
-    &__timeline {
-      height: 92px;
-      width: 648px;
-      padding: 0;
-      top: -92px;
     }
 
     &__bar {
@@ -165,18 +189,18 @@
     }
 
     &__replay {
-      top: -135%;
-      left: 4.5%;
+      flex-grow: 6;
+
+      svg {
+        right: 41%;
+      }
     }
 
     &__subtitles {
-      top: -132%;
-      left: 80%;
-    }
 
-    &__fullscreen {
-      top: -132%;
-      left: 89.5%;
+      svg {
+        left: 48%;
+      }
     }
   }
 }
@@ -191,11 +215,19 @@
       height: 499px;
     }
 
+    &__title {
+      width: 800px;
+    }
+
     &__controls {
       width: 800px;
     }
 
     &__timeline {
+      width: 800px;
+    }
+
+    &__buttons {
       width: 800px;
     }
 
@@ -208,18 +240,11 @@
     }
 
     &__replay {
-      top: -137%;
-      left: 3.5%;
-    }
+      flex-grow: 8;
 
-    &__subtitles {
-      top: -132%;
-      left: 83.5%;
-    }
-
-    &__fullscreen {
-      top: -132%;
-      left: 91.5%;
+      svg {
+        right: 44%;
+      }
     }
   }
 }
